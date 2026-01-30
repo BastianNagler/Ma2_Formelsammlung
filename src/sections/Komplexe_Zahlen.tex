@@ -1,0 +1,50 @@
+\section{Komplexe Zahlen}
+
+\textbf{Exponetialform}
+\begin{align*}
+    a \cdot \cos(\varphi) + b \cdot j \cdot \sin(\varphi) &= \sqrt{a^2 +b^2} \cdot e^{j\varphi} \\
+    (\cos(x) + j \cdot \sin(x))^n &= \cos(n\cdot x) + j \cdot \sin(n \cdot x) \\
+    Arg(z) &= \arctan\left(\frac{Im(z)}{Re(z)}\right) \\
+\end{align*}
+
+
+\textbf{Konjugation und Betrag}
+
+\begin{align}
+    \overline{z + w} = \overline{z} + \overline{w} \qquad ,& \qquad \overline{z - w} = \overline{z} - \overline{w} \\
+    \overline{z \cdot w} = \overline{z} \cdot \overline{w} \qquad ,& \qquad \overline{z \div  w} = \overline{z} \div  \overline{w} \\
+    \overline{\overline{z}} =& z \\
+    Re{z} = \frac{z + \overline{z}}{2} \qquad ,& \qquad Im{z} = \frac{z - \overline{z}}{2j} \\
+    |z \cdot w| = |z| \cdot |w| \qquad ,& \qquad |z \div w| = |z| \div |w| \\
+    z \cdot \overline{z} =& |z|^2  \\
+    |z + w| \leq |z| + |w| \qquad ,& \qquad |z - w| \geq ||z| - |w||
+\end{align}
+
+\textbf{Mengen}
+
+\begin{align}
+    \text{Ebene: } & M = \{z \in \mathbb{C} \mid |z| = |z-j| \} \\
+    \text{Kreis: } & M = \{z \in \mathbb{C} \mid |z - z_0| \leq r \}
+\end{align}
+
+\textbf{Exponentialfunktion}\\
+Ergibt Kreis in der komplexen Ebene.
+\begin{align*}
+    e^z \neq 0 \\
+    \overline{e^z} = e^{\overline{z}}
+\end{align*}
+
+\textbf{Wurzelberechnung}
+\begin{align*}
+    \sqrt[n]{z} &= \sqrt[n]{|z|} \cdot e^{j\frac{1}{n}(Arg(z) + 2k\pi)} \quad k = 0, 1, \ldots, n-1 \\
+\end{align*}
+Graphisch: \\
+Drehung des Punktes \(z\) n-mal um den Ursprung um den Winkel \(\frac{2\pi}{n}\) und Skalierung mit dem Betrag \(\sqrt[n]{|z|}\).\\
+Es gibt n Punkte der n-ten Wurzel, die gleichmäßig auf dem Kreis mit Radius \(\sqrt[n]{|z|}\) verteilt sind.
+
+\textbf{Logarithmus}
+\begin{align*}
+    log(z) &= ln|z| + j \cdot (Arg(z) + 2k\pi) , k \in \mathbb{Z} \\
+    Log(z) &= ln|z| + j \cdot Arg(z)
+\end{align*}
+

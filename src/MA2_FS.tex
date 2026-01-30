@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\setlength{\parindent}{0em} 	                    %Absatzeinrücken verhindern
+\setlength{\parskip}{0.5em}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.5cm]{geometry}        %Seitenränder setzen
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{csquotes}
+\usepackage[
+	backend=biber,
+	style=ieee,
+	sorting=none,
+]{biblatex}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{bm}
+
+\graphicspath{{../Bilder/}}
+\sloppy
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+%DEFINES
+
+\def\Autor{Bastian Nagler}
+\def\Semester{Sommersemester 2025}
+\def\Titel{Formelsammlung Mathematik 2}
+
+%Bibliographie
+\addbibresource{literatur.bib}
+\ExecuteBibliographyOptions{url=true}
+
+% Seitenränder
+\geometry{margin=2.5cm}
+
+%Einrückung der Absätze
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+%leere erste Seite
+\fancypagestyle{plain}{
+  \fancyhf{} % alles löschen (Header + Footer)
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Kopfzeile
+\pagestyle{fancy}
+\setlength{\headheight}{24pt} % Höhe der Kopfzeile anpassen
+\fancyhead[L]{\includegraphics[width=4cm]{../Bilder/OTH_Logo_1lineB_pos_b.png}} % Bild auf der linken Seite
+\fancyhead[R]{\Titel} % Titel auf der rechten Seite
+ 
+% Fußzeile
+\fancyfoot[R]{\thepage} % Seitenzahl in der Fußzeile
+\fancyfoot[C]{} % Keine Seitenzahl in der mittleren Fußzeile
+\fancyfoot[L]{\Autor}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\begin{document}
+	\begin{titlepage}
+		\thispagestyle{empty}
+
+			\begin{center}
+				\vspace*{\stretch{0.5}}
+				\includegraphics[width=0.5\textwidth]{../Bilder/OTHR_FakEI_Logo.png}\\
+				\vspace*{\stretch{0.25}}
+				\Huge
+				\textsc{Formelsammlung}\\
+				\textsc{Mathematik 2 \hspace*{1pt} (Ma2)}\\
+				\large
+				\vspace*{\stretch{0.5}}
+				{nach Vorlesungsunterlagen von\\ G. Dietel}\\
+				\vspace*{\stretch{0.5}}
+
+		\vspace*{\stretch{2}}
+		{\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{l l}
+			Erstellt von:  & \hspace{4cm} Bastian Nagler\\
+			Letzter Stand:  & \hspace{4cm} \textsc{\Semester}  \\
+		\end{tabular}
+		}
+		\vspace*{\stretch{1}}
+
+		\end{center}
+	\end{titlepage}
+
+	\newpage
+
+	\tableofcontents
+	\newpage
+
+	%INPUTS
+
+	\include{sections/1-dim_Integrale}
+
+    \include{sections/Komplexe_Zahlen}
+
+    \include{sections/Reihen}
+
+    \include{sections/Funktionen_mit_mehr_Var}
+
+    \include{sections/Differentialrechnung}
+
+    \include{sections/Winkeltabelle}
+
+\end{document}

@@ -1,0 +1,12 @@
+tags
+*.aux
+*.toc
+*.log
+*.out
+*.fdb*
+*.fls
+main.synctex.busy
+main.synctex(busy)
+main.synctex.gz
+
+LOOKUP.*

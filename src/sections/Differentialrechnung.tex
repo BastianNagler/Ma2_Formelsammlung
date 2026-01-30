@@ -1,0 +1,73 @@
+\section{Differentialrechnung}
+
+\textbf{Definition Seperabel:}\\
+Eine Differentialgleichung heißt separabel, wenn sie in der Form \(y' = f(x) \cdot g(y)\) geschrieben werden kann.\\
+Genauer heißt dies, dass die rechte Seite der DGL in ein Produkt von zwei Funktionen zerlegt werden kann, wobei eine Funktion nur von \(x\) und die andere nur von \(y\) abhängt.\\
+
+\subsection{DGL 1. Ordnung}
+
+\subsubsection{Seperable DGL 1. Ordnung}
+\begin{align*}
+    y' &= f(x) \cdot g(y) \left(\text{bzw. } y'=\frac{f(x)}{g(y)} \quad \text{oder} \quad y'=\frac{g(y)}{f(x)}\right)\\
+    \frac{dy}{dx} &= f(x) \cdot g(y) \\
+    \frac{dy}{g(y)} &= f(x) \, dx \\
+    \int \frac{dy}{g(y)} &= \int f(x) \, dx\\
+\end{align*}
+\textbf{Beachte:} Triviale Lösung \(y=0\) möglicherweise auch Lösung der DGL.
+
+\subsubsection{Seperabel durch Substitution}
+\textbf{A) Lineare Substitution:}
+\begin{align*}
+    &y' = F(ax + by + c)\\
+    \rightarrow& z = ax+ by + c \Rightarrow y=\frac{1}{b}(z - ax - c) \Rightarrow y' = \frac{1}{b}(z'-a)\\
+    \rightarrow \text{\textbf{Einsetzen: }}& \frac{1}{b}(z'-a) = F(z)\\
+\end{align*}
+
+\textbf{B) Euler-homogene DGL:}
+\begin{align*}
+    &y' = F\left(\frac{y}{x}\right) \Rightarrow z = \frac{y}{x} \\
+    \rightarrow& y = zx \Rightarrow y' = z' \cdot x + z\\
+    \rightarrow& z'x + z = F(z)
+\end{align*}
+
+\subsection{Lineare DGL 1. Ordnung:}
+
+\begin{align*}
+    y' &= f(x) \cdot y + g(x) \quad , \quad g(x) \hat{=} \text{Störfunktion}\\
+    y_h &= C \cdot e^{\int f(x) \, dx} \\
+    y_p &= y_h \cdot \int \frac{g(x)}{y_h} \ dx\\
+    \Rightarrow y &= y_h + y_p = C \cdot e^{\int f(x) \, dx} + C \cdot e^{\int f(x) \, dx} \int \frac{g(x)}{C \cdot e^{\int f(x) \, dx}} \ dx
+\end{align*}
+\textbf{Bemerkung:} Ist die DGL homogen, d.h. \(g(x) = 0\), so ist die Lösung der DGL nur die homogene Lösung \(y_h\).\\
+\textbf{Beachte:} Auch die triviale Lösung \(y = 0\) ist eine Lösung der DGL, wenn \(g(x) = 0\).\\
+
+Ist h(x) eine spezielle Lösung der DGL, so ist die allgemeine Lösung gegeben durch:
+\begin{align*}
+    y &= h(x) + C \cdot e^{\int f(x) \, dx} \\
+\end{align*}
+
+\subsection{DGL 2. Ordnung:}
+
+\textbf{Homogone DGL mit konstanten Koeffizienten:}
+\begin{align*}
+    &y'' + a \cdot y' + b \cdot y = 0\\
+    \Rightarrow & \lambda^2 + a \cdot \lambda + b = 0\\
+    \Rightarrow & \lambda_1, \lambda_2 \text{ sind die Wurzeln des charakteristischen Polynoms}\\
+    \Rightarrow & y = C_1 \cdot e^{\lambda_1 \cdot x} + C_2 \cdot e^{\lambda_2 \cdot x}
+\end{align*}
+Bei mehrfachen Wurzeln mit Grad n:
+\begin{align*}
+    \Rightarrow C \cdot x^{n-1} \cdot e^{\lambda x}\\
+\end{align*}
+Bei komplexen Wurzeln:
+\begin{align*}
+    \Rightarrow  C \cdot e^{zx} = C \cdot e^{(a+jb)x} = C \cdot e^{ax} \cdot e^{jbx} = C_1 \cdot e^{a x} \cdot \cos(b x) + C_2 \cdot e^{a x} \cdot \sin(b x)\\
+\end{align*}
+
+\textbf{Inhomogene DGL mit konstanten Koeffizienten:}
+\begin{align*}
+    &y'' + a \cdot y' + b \cdot y = f(x)\\
+    &\text{Lösung: } y = y_h + y_p\\
+    &\text{mit } y_h = C_1 \cdot e^{\lambda_1 \cdot x} + C_2 \cdot e^{\lambda_2 \cdot x}\\
+    &\text{und } y_p = \text{partikuläre Lösung} \quad (\Rightarrow Papula)\\
+\end{align*}

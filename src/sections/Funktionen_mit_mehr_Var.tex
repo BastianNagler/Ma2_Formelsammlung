@@ -1,0 +1,85 @@
+\section{Funktionen mit mehreren Variablen}
+
+\textbf{Differenzierbarkeit:}\\
+Es gilt: \\
+Jede nicht abschnittsweise definierte Funktion, welche aus den Grundrechenarten (e, ln, sin, cos, ...) zusammengesetzt ist, ist differenzierbar.
+
+\textbf{Höhenlinen:}
+\begin{align*}
+    f(x,y) = c \quad \text{mit} \quad c \in \mathbb{R}
+\end{align*}
+
+\textbf{Gradient:}
+\begin{align*}
+    grad_f(x,y) &= \nabla f(x,y) = \left( \begin{array}{c}
+        f_x(x,y)\\
+        f_y(x,y)
+    \end{array} \right) \\
+    grad_f(x_0,y_0) &= \nabla f(x_0,y_0) = \left( \begin{array}{c}
+        f_x(x_0,y_0)\\
+        f_y(x_0,y_0)
+    \end{array} \right) \\
+\end{align*}
+\textbf{Jakobimatrix:}
+\begin{align*}
+    J_f(x,y) &= \left( \begin{array}{cc}
+        f_x(x,y) & f_y(x,y)
+    \end{array} \right) \\
+    J_f(x_0,y_0) &= \left( \begin{array}{cc}
+        f_x(x_0,y_0) & f_y(x_0,y_0)
+    \end{array} \right)
+\end{align*}
+
+\textbf{Tangeltialebene:}
+\begin{align*}
+    T_f=f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)
+\end{align*}
+
+\textbf{Richtungsableitung:}
+\begin{align*}
+    \frac{\partial z}{\partial \vec{v}} (x_0,y_0) = \nabla f(x_0,y_0) \circ \vec{v_0} = \nabla f(x_0,y_0) \circ \frac{1}{|\vec{v}|} \vec{v}
+\end{align*}
+
+\textbf{Differentiationsregeln:}
+\begin{align*}
+    &\lambda \cdot f + \mu \cdot g \rightarrow J_{\lambda f + \mu g}(x,y) = \lambda \cdot J_f(x,y) + \mu \cdot J_g(x,y) \quad &\text{Linearität}\\
+    &f \cdot g \rightarrow J_{f \cdot g}(x,y) = f(x,y) \cdot J_g(x,y) + g(x,y) \cdot J_f(x,y) \quad &\text{Produktregel}\\
+    &f \circ g \rightarrow J_{f \circ g}(a) = J_f(g(a)) \cdot J_g(a) \quad &\text{Kettenregel}\\
+\end{align*}
+
+\textbf{Extremwerte:}
+\begin{align*}
+    &H_f = \left( \begin{array}{cc}
+        f_{xx}(x,y) & f_{xy}(x,y)\\
+        f_{xy}(x,y) & f_{yy}(x,y)
+    \end{array} \right) \\
+    &det(H_f) = f_{xx}(x,y) \cdot f_{yy}(x,y) - (f_{xy}(x,y))^2 \\
+    \text{Notwendige Bedingung: } &f_x(x_0,y_0) = 0 \quad \text{und} \quad f_y(x_0,y_0) = 0 \quad \Rightarrow \quad x_0 \text{ und } y_0\\
+    &det(H_f(x_0,y_0)) < 0 \quad \text{(Sattelpunkt)} \\
+    &det(H_f(x_0,y_0)) > 0 \quad \text{und} \quad f_{xx} > 0 \quad \text{(Minimum)} \\
+    &det(H_f(x_0,y_0)) > 0 \quad \text{und} \quad f_{xx} < 0 \quad \text{(Maximum)} \\
+\end{align*}
+Wichtig: Auch Rand des Definitionsbereich beachten!
+\\
+\\
+\\
+\textbf{Normgebiete:}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Normgebiete.png}
+\end{figure}
+\begin{align*}
+    &\text{1: } \quad \int_{x=a}^{b} \int_{y=\phi_1}^{\phi_2} f(x,y) \, dy \, dx \\
+    &\text{2: } \quad \int_{y=c}^{d} \int_{x=\Psi_1}^{\Psi_2} f(x,y) \, dx \, dy \\
+    &\text{3: } \quad \int_{\varphi = \alpha}^{\beta} \int_{r = g_1}^{g_2} f(r \cdot \cos(\varphi), r \cdot \sin(\varphi)) r \, dr \, d\varphi \\
+\end{align*}
+
+\textbf{Flächeninhalt:}
+\begin{align*}
+    A &= \int_{x=a}^{b} \int_{y=\phi_1}^{\phi_2} 1 \, dy \, dx = \int_{y=c}^{d} \int_{x=\Psi_1}^{\Psi_2} 1 \, dx \, dy = \int_{\varphi = \alpha}^{\beta} \int_{r = g_1}^{g_2} r \, dr \, d\varphi
+\end{align*}
+
+\textbf{Flächenschwerpunkt:}
+\begin{align*}
+    &f(x,y) \text{ sei eine Dichte-Funktion, so ist der Schwerpunkt } (x_S, y_S) \\
+    &x_S = \frac{1}{A} \int \int_{A}^{} x \cdot f(x,y) \, dA \qquad y_S = \frac{1}{A} \int \int_{A}^{} y\cdot f(x,y) \, dA \\
+\end{align*}

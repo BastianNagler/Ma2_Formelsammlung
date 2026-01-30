@@ -1,0 +1,36 @@
+\section{1-dim Integrale}
+
+\begin{align*}
+    f(x) = \frac{d}{dx} \int_{a}^{x} f(t) dt
+\end{align*}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c c}
+        \toprule
+        f(x) & F(x) \\
+        \midrule
+        \(x^a\) & \(\frac{x^{a+1}}{a+1}\) \\
+        \(x^{-1}\) & \(\ln|x|\) \\
+        \(e^x\) & \(e^x\)\\
+        \(\cos(x)\) & \(\sin(x)\) \\
+        \(\sin(x)\) & \(-\cos(x)\) \\
+        \(\frac{1}{1+x^2}\) & \(\arctan(x)\) \\
+        \(\frac{1}{\sqrt{1-x^2}}\) & \(\arcsin(x)\) \\
+    \end{tabular}
+\end{table}
+
+\textbf{Partielle Integration:}
+\begin{align*}
+    \int u \cdot v' = uv - \int v \cdot u'
+\end{align*}
+
+\textbf{Substitution:}
+\begin{align*}
+    \int f(g(x)) \cdot g'(x) dx = \int f(u) du
+\end{align*}
+
+\textbf{Fläche zwischen zwei Graphen:}
+\begin{align*}
+    A = \int_{a}^{b} |f(x) - g(x)| dx
+\end{align*}
