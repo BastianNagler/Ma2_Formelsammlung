@@ -10,4 +10,4 @@ main.synctex(busy)
 main.synctex.gz
 
 LOOKUP.*
-*\build\*
+build/
