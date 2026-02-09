@@ -5,6 +5,9 @@ tags
 *.out
 *.fdb*
 *.fls
+*.bcf
+*.run.xml
+*.synctex
 main.synctex.busy
 main.synctex(busy)
 main.synctex.gz
